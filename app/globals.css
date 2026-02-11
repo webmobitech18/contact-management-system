@@ -1,0 +1,168 @@
+:root {
+  color-scheme: light;
+  --bg: #f3f6fb;
+  --panel: #ffffff;
+  --text: #14213d;
+  --muted: #546179;
+  --primary: #0d47a1;
+  --danger: #b42318;
+  --border: #d8e0ec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+h1,
+h2 {
+  margin: 0 0 0.5rem;
+}
+
+main.centered-page {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.panel {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  box-shadow: 0 8px 30px rgba(13, 71, 161, 0.08);
+  padding: 1rem;
+}
+
+.login-panel {
+  width: min(500px, 100%);
+}
+
+.logo {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.logo.small {
+  width: 90px;
+  margin: 0;
+}
+
+.muted {
+  color: var(--muted);
+}
+
+.error {
+  color: var(--danger);
+}
+
+.stack {
+  display: grid;
+  gap: 0.9rem;
+}
+
+label,
+fieldset {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.92rem;
+}
+
+input {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.65rem;
+}
+
+button {
+  border: 0;
+  border-radius: 8px;
+  padding: 0.6rem 0.9rem;
+  cursor: pointer;
+  background: var(--primary);
+  color: white;
+}
+
+button.secondary {
+  background: #eef2fb;
+  color: var(--text);
+}
+
+button.danger {
+  background: var(--danger);
+}
+
+.dashboard-wrap {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.topbar {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.topbar > div {
+  flex: 1;
+}
+
+.grid-form {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.checkboxes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.actions {
+  display: flex;
+  gap: 0.5rem;
+  align-items: end;
+}
+
+.filter-grid {
+  display: grid;
+  gap: 0.8rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.table-wrap {
+  overflow-x: auto;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  min-width: 1300px;
+}
+
+th,
+td {
+  text-align: left;
+  border-bottom: 1px solid var(--border);
+  padding: 0.55rem;
+  font-size: 0.85rem;
+  vertical-align: top;
+}
+
+.row-actions {
+  display: flex;
+  gap: 0.35rem;
+}
+
+.empty {
+  text-align: center;
+  color: var(--muted);
+}
